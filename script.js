@@ -13,6 +13,26 @@
   var yearEl = document.getElementById("year");
   if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+  /* ---- logo: show the shipped emblem (assets/logo.svg), fall back to the inline SVG
+          if it is missing, then quietly upgrade to the real assets/logo.png if present ---- */
+  document.querySelectorAll(".brand__mark").forEach(function (mark) {
+    var img = mark.querySelector(".brand__png");
+    var svg = mark.querySelector(".brand__svg");
+    if (!img) return;
+    var show = function () { img.style.display = "block"; if (svg) svg.style.display = "none"; };
+    if (img.complete && img.naturalWidth > 0) show();
+    img.addEventListener("load", function () { if (img.naturalWidth > 0) show(); });
+    img.addEventListener("error", function () { img.style.display = "none"; if (svg) svg.style.display = "block"; });
+  });
+  // one quiet probe: if the owner has dropped in their real logo.png, use it everywhere
+  var logoProbe = new Image();
+  logoProbe.onload = function () {
+    if (logoProbe.naturalWidth > 0) {
+      document.querySelectorAll(".brand__png").forEach(function (im) { im.src = "assets/logo.png"; });
+    }
+  };
+  logoProbe.src = "assets/logo.png";
+
   /* ---- nav: glass bar on scroll ---- */
   var nav = document.getElementById("nav");
   if (nav) {

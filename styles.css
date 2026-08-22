@@ -114,10 +114,9 @@ main:focus { outline: none; }
 
 .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--navy-700); min-width: 0; }
 .brand__mark { width: 40px; height: 40px; color: var(--gold-500); flex: none; position: relative; }
-.brand__png { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; display: block; }
-.brand__png.is-missing { display: none; }
-.brand__svg { display: none; width: 100%; height: 100%; }
-.brand__png.is-missing + .brand__svg { display: block; }
+/* SVG amblem varsayılan (JS'siz de her zaman görünür); gerçek logo.png yüklenince JS onu gösterir */
+.brand__png { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; display: none; }
+.brand__svg { display: block; width: 100%; height: 100%; }
 .brand__mark .mark-ring { stroke: var(--gold-500); }
 .brand__mark .mark-s { stroke: var(--navy-700); }
 .brand__mark .mark-pin { stroke: var(--gold-500); }
@@ -483,7 +482,8 @@ main:focus { outline: none; }
 .brand--footer { color: #fff; }
 .brand--footer .brand__word { color: #fff; }
 .brand--footer .brand__mark { width: 46px; height: 46px; }
-.brand__svg--footer { display: block; }
+/* gerçek logo (beyaz zeminli olabilir) koyu footer'da temiz bir rozet gibi dursun */
+.brand--footer .brand__png { background: #fff; }
 .footer__tag { font-family: var(--serif); font-style: italic; color: var(--gold-300); margin: 14px 0 8px; font-size: 1.05rem; }
 .footer__desc { font-size: 14px; color: #93a6c8; max-width: 28em; }
 .footer__col h3 { font-family: var(--sans); font-size: 13px; font-weight: 800; letter-spacing: .12em; text-transform: uppercase; color: var(--gold-400); margin-bottom: 16px; }
