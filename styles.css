@@ -113,9 +113,10 @@ main:focus { outline: none; }
 .nav__inner { display: flex; align-items: center; justify-content: space-between; gap: 20px; height: var(--nav-h); }
 
 .brand { display: inline-flex; align-items: center; gap: 11px; color: var(--navy-700); min-width: 0; }
-.brand__mark { width: 40px; height: 40px; color: var(--gold-500); flex: none; position: relative; }
-/* SVG amblem varsayılan (JS'siz de her zaman görünür); gerçek logo.png yüklenince JS onu gösterir */
-.brand__png { width: 100%; height: 100%; object-fit: contain; border-radius: 50%; display: none; }
+.brand__mark { width: 40px; height: 40px; color: var(--gold-500); flex: none; position: relative; overflow: hidden; border-radius: 50%; }
+/* SVG amblem varsayılan (JS'siz de her zaman görünür); gerçek logo.png yüklenince JS onu gösterir.
+   logo.png'de çemberin etrafında ~%18 beyaz boşluk var; scale ile kırpıp çerçeveye tam oturtuyoruz. */
+.brand__png { width: 100%; height: 100%; object-fit: contain; display: none; transform: scale(1.55); }
 .brand__svg { display: block; width: 100%; height: 100%; }
 .brand__mark .mark-ring { stroke: var(--gold-500); }
 .brand__mark .mark-s { stroke: var(--navy-700); }
