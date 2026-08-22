@@ -297,26 +297,26 @@ main:focus { outline: none; }
 .faq .section-head { position: relative; display: inline-block; }
 .mascot--faq {
   position: absolute; top: 50%; left: 50%; z-index: 3;
-  width: clamp(80px, 8vw, 108px);
-  transform: translate(calc(-50% + 130px), -50%);   /* animasyon yoksa başlığın sağında park eder */
+  width: clamp(72px, 7vw, 92px);
+  transform: translate(calc(-50% + 150px), -50%);   /* animasyon yoksa başlığın sağında park eder */
 }
 .mascot--faq img { filter: drop-shadow(0 12px 28px rgba(201,162,75,.45)); }
-.mascot--faq.is-in { animation: mascotOrbit 12s linear .4s infinite; }
-/* elips: yatay yarıçap 130px, dikey yarıçap 70px — başlık merkezinin çevresinde döner */
+.mascot--faq.is-in { animation: mascotOrbit 13s linear .4s infinite; }
+/* elips: yatay yarıçap 150px, dikey yarıçap 72px — başlık merkezinin çevresinde döner */
 @keyframes mascotOrbit {
-  0%     { transform: translate(calc(-50% + 130px),   calc(-50% + 0px)); }
-  8.33%  { transform: translate(calc(-50% + 112.6px), calc(-50% + 35px)); }
-  16.66% { transform: translate(calc(-50% + 65px),    calc(-50% + 60.6px)); }
-  25%    { transform: translate(calc(-50% + 0px),     calc(-50% + 70px)); }
-  33.33% { transform: translate(calc(-50% - 65px),    calc(-50% + 60.6px)); }
-  41.66% { transform: translate(calc(-50% - 112.6px), calc(-50% + 35px)); }
-  50%    { transform: translate(calc(-50% - 130px),   calc(-50% + 0px)); }
-  58.33% { transform: translate(calc(-50% - 112.6px), calc(-50% - 35px)); }
-  66.66% { transform: translate(calc(-50% - 65px),    calc(-50% - 60.6px)); }
-  75%    { transform: translate(calc(-50% + 0px),     calc(-50% - 70px)); }
-  83.33% { transform: translate(calc(-50% + 65px),    calc(-50% - 60.6px)); }
-  91.66% { transform: translate(calc(-50% + 112.6px), calc(-50% - 35px)); }
-  100%   { transform: translate(calc(-50% + 130px),   calc(-50% + 0px)); }
+  0%     { transform: translate(calc(-50% + 150px),   calc(-50% + 0px)); }
+  8.33%  { transform: translate(calc(-50% + 129.9px), calc(-50% + 36px)); }
+  16.66% { transform: translate(calc(-50% + 75px),    calc(-50% + 62.4px)); }
+  25%    { transform: translate(calc(-50% + 0px),     calc(-50% + 72px)); }
+  33.33% { transform: translate(calc(-50% - 75px),    calc(-50% + 62.4px)); }
+  41.66% { transform: translate(calc(-50% - 129.9px), calc(-50% + 36px)); }
+  50%    { transform: translate(calc(-50% - 150px),   calc(-50% + 0px)); }
+  58.33% { transform: translate(calc(-50% - 129.9px), calc(-50% - 36px)); }
+  66.66% { transform: translate(calc(-50% - 75px),    calc(-50% - 62.4px)); }
+  75%    { transform: translate(calc(-50% + 0px),     calc(-50% - 72px)); }
+  83.33% { transform: translate(calc(-50% + 75px),    calc(-50% - 62.4px)); }
+  91.66% { transform: translate(calc(-50% + 129.9px), calc(-50% - 36px)); }
+  100%   { transform: translate(calc(-50% + 150px),   calc(-50% + 0px)); }
 }
 
 @keyframes mascotEnter {
