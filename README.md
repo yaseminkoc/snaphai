@@ -28,13 +28,17 @@ Tamamen statik olduğu için herhangi bir yere sürükle-bırak yüklenebilir:
 - **Klasik hosting (cPanel)** → dosyaları `public_html` içine kopyala.
 Sonra `snaphai.com` alan adını sağlayıcının panelinden bağla.
 
-## Kendi logonu koymak
-Sitede amblem SVG olarak yeniden çizildi ve her yerde net görünür.
-Orijinal PNG/SVG logonu kullanmak istersen:
-1. Dosyanı `assets/logo.png` olarak koy.
-2. `index.html` içindeki nav ve footer'daki `<span class="brand__mark">…</span>`
-   bloğunu `<img src="assets/logo.png" alt="SnaphAI" style="width:38px;height:38px">`
-   ile değiştir.
+## Görselleri ekle (logo + maskot)
+Site, iki gerçek görseli **sen klasöre koyunca otomatik** kullanır. Koymazsan
+site bozulmaz: logo yerine SVG amblem çizimi görünür, maskot ise gizlenir.
+
+1. **Logo:** dosyanı `assets/logo.png` olarak kaydet. Menüdeki (nav) amblem
+   anında senin logonla değişir. (Footer'da tema uyumlu SVG amblem kullanılır.)
+2. **Maskot:** parlayan küre maskotunu `assets/mascot.png` olarak kaydet
+   (arka planı şeffaf PNG önerilir). Hero bölümünde telefonun yanında ve alttaki
+   "Loncana bugün katıl" CTA bandında süzülerek görünür.
+3. **Sosyal paylaşım görseli (opsiyonel):** 1200×630 px bir `assets/og.png` ekle —
+   link paylaşımlarında önizleme görseli olur (kafadaki `og:image` etiketi hazır).
 
 ## Özelleştirme ipuçları
 - Renkler ve yazı tipleri: `styles.css` en üstteki `:root` değişkenleri.

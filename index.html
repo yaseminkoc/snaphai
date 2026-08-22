@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SnaphAI — Instagram'ın Dijital Loncası</title>
+  <meta name="description" content="SnaphAI, Instagram butiklerini saniyeler içinde sıfır kodlu akıllı mağazaya dönüştüren otonom yapay zeka çalışanıdır. Sesli mesajla satar, pazarlık eder, satışı DM'de kapatır." />
+  <meta name="theme-color" content="#0F2447" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="canonical" href="https://snaphai.com/" />
+
+  <!-- Open Graph / Twitter -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="SnaphAI — Instagram'ın Dijital Loncası" />
+  <meta property="og:description" content="Profilini bağla, gerisini yapay zeka çırağın halletsin. Sesli mesajla satan, pazarlık eden, satışı DM'de kapatan otonom yapay zeka çalışanı." />
+  <meta property="og:url" content="https://snaphai.com/" />
+  <meta property="og:image" content="https://snaphai.com/assets/og.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="SnaphAI — Instagram'ın Dijital Loncası" />
+  <meta name="twitter:description" content="Profilini bağla, gerisini yapay zeka çırağın halletsin. Instagram butikleri için otonom yapay zeka çalışanı." />
+  <meta name="twitter:image" content="https://snaphai.com/assets/og.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;0,9..144,600;0,9..144,700;0,9..144,800;1,9..144,500&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <a class="skip-link" href="#main">İçeriğe geç</a>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="brand" href="#hero" aria-label="SnaphAI ana sayfa">
+        <span class="brand__mark">
+          <img class="brand__png" src="assets/logo.png" alt="SnaphAI" width="40" height="40"
+               onerror="this.classList.add('is-missing')" />
+          <svg class="brand__svg" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <circle cx="60" cy="60" r="55" stroke="currentColor" stroke-width="3" class="mark-ring"/>
+            <path d="M78 46 C78 33 46 31 46 45 C46 57 78 58 78 74 C78 89 44 89 44 74" class="mark-s" stroke-width="10" stroke-linecap="round" fill="none"/>
+            <g class="mark-pin" stroke-width="2.6" stroke-linecap="round">
+              <line x1="70" y1="34" x2="63" y2="20"/><line x1="76" y1="34" x2="76" y2="16"/><line x1="82" y1="34" x2="89" y2="20"/>
+            </g>
+            <g class="mark-dot"><circle cx="62.5" cy="19" r="3"/><circle cx="76" cy="14.5" r="3"/><circle cx="89.5" cy="19" r="3"/></g>
+          </svg>
+        </span>
+        <span class="brand__word">Snaph<span class="brand__ai">AI</span></span>
+      </a>
+
+      <nav class="nav__links" aria-label="Ana menü">
+        <a href="#nasil">Nasıl Çalışır</a>
+        <a href="#ozellikler">Özellikler</a>
+        <a href="#felsefe">Felsefemiz</a>
+        <a href="#fiyat">Fiyatlandırma</a>
+        <a href="#sss">SSS</a>
+      </nav>
+
+      <div class="nav__cta">
+        <a href="#fiyat" class="btn btn--ghost">Fiyatları Gör</a>
+        <a href="#iletisim" class="btn btn--gold">Ücretsiz Demo</a>
+      </div>
+
+      <button class="nav__burger" id="burger" aria-label="Menüyü aç" aria-expanded="false" aria-controls="mobileMenu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu" hidden>
+      <a href="#nasil">Nasıl Çalışır</a>
+      <a href="#ozellikler">Özellikler</a>
+      <a href="#felsefe">Felsefemiz</a>
+      <a href="#fiyat">Fiyatlandırma</a>
+      <a href="#sss">SSS</a>
+      <a href="#iletisim" class="btn btn--gold btn--block">Ücretsiz Demo</a>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="hero">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__grid">
+        <div class="hero__copy reveal">
+          <span class="eyebrow"><span class="eyebrow__dot"></span>İNSTAGRAM'IN DİJİTAL LONCASI</span>
+          <h1 class="hero__title">
+            Profilini bağla,<br />gerisini <span class="txt-gold">yapay zeka çırağın</span> halletsin.
+          </h1>
+          <p class="hero__lede">
+            SnaphAI, Instagram butiğini <strong>saniyeler içinde</strong> sıfır kodlu akıllı bir mağazaya
+            dönüştürür. Gelen sesli mesajları anlar, nabza göre pazarlık eder ve satışı
+            DM'den çıkmadan güvenli ödeme linkiyle kapatır.
+          </p>
+          <div class="hero__actions">
+            <a href="#iletisim" class="btn btn--gold btn--lg">Ücretsiz Demo Al</a>
+            <a href="#nasil" class="btn btn--outline btn--lg">
+              <span class="play-ico" aria-hidden="true">▶</span> Nasıl Çalışır?
+            </a>
+          </div>
+          <ul class="hero__ticks">
+            <li>60 saniyede kurulum</li>
+            <li>Kod bilgisi gerekmez</li>
+            <li>Kredi kartı istemez</li>
+          </ul>
+        </div>
+
+        <!-- phone mockup -->
+        <div class="hero__visual reveal" aria-hidden="true">
+          <img class="mascot mascot--hero" src="assets/mascot.png" alt="" onerror="this.style.display='none'" />
+          <div class="phone">
+            <div class="phone__notch"></div>
+            <div class="phone__screen">
+              <div class="dm-head">
+                <span class="dm-avatar">ZB</span>
+                <div class="dm-head__meta">
+                  <strong>Zarif Butik</strong>
+                  <span>SnaphAI ile yanıtlıyor · <span class="dot-live"></span> aktif</span>
+                </div>
+              </div>
+
+              <div class="dm-body">
+                <div class="bubble bubble--in">
+                  <div class="voice">
+                    <span class="voice__play">▶</span>
+                    <span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                    <span class="voice__time">0:11</span>
+                  </div>
+                  <span class="bubble__cap">Müşteri · sesli mesaj</span>
+                </div>
+
+                <div class="bubble bubble--out">
+                  <div class="voice voice--gold">
+                    <span class="voice__play">▶</span>
+                    <span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
+                    <span class="voice__time">0:08</span>
+                  </div>
+                  <p>Merhaba 🌿 O elbise stokta! Bedeninize göre iki renk önerebilirim.</p>
+                  <span class="bubble__cap">SnaphAI · sesli yanıt</span>
+                </div>
+
+                <div class="product-card">
+                  <div class="product-card__img"></div>
+                  <div class="product-card__info">
+                    <strong>Keten Anadolu Elbisesi</strong>
+                    <span class="product-card__price">₺1.240 <s>₺1.450</s></span>
+                    <span class="product-card__tag">Öğrenciye özel jest 🎓</span>
+                  </div>
+                </div>
+
+                <div class="bubble bubble--out bubble--pay">
+                  <span class="pay-ico">🔒</span> Güvenli ödeme linkiniz hazır — iyzico
+                </div>
+              </div>
+
+              <div class="dm-foot"><span>⚡ SnaphAI otonom yanıtladı</span></div>
+            </div>
+          </div>
+          <div class="float-badge float-badge--1">🎙️ Sesten sese</div>
+          <div class="float-badge float-badge--2">🤝 Nabza göre şerbet</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS ============ -->
+    <section class="stats" aria-label="SnaphAI ne sağlar">
+      <div class="container stats__grid">
+        <div class="stat reveal"><span class="stat__num" data-count="60" data-suffix=" sn">60 sn</span><span class="stat__label">Ortalama kurulum süresi</span></div>
+        <div class="stat reveal"><span class="stat__num">7/24</span><span class="stat__label">Uyumayan satış asistanı</span></div>
+        <div class="stat reveal"><span class="stat__num" data-count="38" data-prefix="%">%38</span><span class="stat__label">Hedeflenen dönüşüm artışı*</span></div>
+        <div class="stat reveal"><span class="stat__num">0</span><span class="stat__label">Cevapsız kalan DM</span></div>
+      </div>
+      <p class="stats__note container">*Hedeflenen değerlerdir; işletmeden işletmeye değişir. SnaphAI'ın sunduğu yeteneklerdir.</p>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="problem section" id="problem">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">DERT</span>
+          <h2 class="section-title">Cevaplanmayan her DM, <span class="txt-gold">kaçan bir satıştır.</span></h2>
+          <p class="section-sub">Instagram butikleri gününü mesaj kutusunda geçiriyor. Manuel süreçler ciroyu eritiyor.</p>
+        </div>
+        <div class="problem__grid">
+          <div class="pcard reveal">
+            <span class="pcard__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>
+            </span>
+            <h3>Gece gelen mesajlar</h3><p>Uyurken düşen 20 soru sabaha kalıyor, müşteri başka butiğe gidiyor.</p>
+          </div>
+          <div class="pcard reveal">
+            <span class="pcard__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="2.5" width="6" height="11" rx="3"/><path d="M6 11a6 6 0 0 0 12 0"/><line x1="12" y1="17" x2="12" y2="21"/><line x1="8" y1="21" x2="16" y2="21"/></svg>
+            </span>
+            <h3>Sesli mesaj yığını</h3><p>Müşteri sesli soruyor, dinlemeye vakit yok; yanıt gecikince satış soğuyor.</p>
+          </div>
+          <div class="pcard reveal">
+            <span class="pcard__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M20.5 7.8 12 12 3.5 7.8"/><path d="M12 12v9"/><path d="M20.5 7.8v8.4L12 21 3.5 16.2V7.8L12 3z"/></svg>
+            </span>
+            <h3>Karışan stok</h3><p>Aynı ürünü iki kişiye satıyorsun, sonra "kalmadı" demek zorunda kalıyorsun.</p>
+          </div>
+          <div class="pcard reveal">
+            <span class="pcard__ico" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M6 3h12v18l-2.3-1.4L13.5 21 12 19.7 10.5 21 8.3 19.6 6 21z"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="15" y2="12"/></svg>
+            </span>
+            <h3>Dağınık sipariş</h3><p>Ödeme, adres, kargo… hepsi DM'de kayboluyor, takip elle yapılıyor.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="how section section--cream" id="nasil">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">NASIL ÇALIŞIR</span>
+          <h2 class="section-title">Dört adımda dijital loncanı kur.</h2>
+          <p class="section-sub">Kurulum bir kahve molasından kısa. Kod yok, Excel yok, PDF yükleme yok.</p>
+        </div>
+
+        <ol class="steps">
+          <li class="step reveal">
+            <span class="step__no">01</span>
+            <div class="step__body"><h3>Bağla</h3><p>Instagram profilini tek tıkla bağla. Başka hiçbir şey yüklemene gerek yok.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="step__no">02</span>
+            <div class="step__body"><h3>Tara</h3><p>SnaphAI geçmiş gönderilerini saniyeler içinde okur; ürünleri, fiyatları ve açıklamaları çıkarıp mağaza veritabanını kendisi kurar.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="step__no">03</span>
+            <div class="step__body"><h3>Sat</h3><p>Müşterinle yazılı ve sesli konuşur, nabza göre pazarlık eder, sepeti büyütür ve satışı güvenli ödeme linkiyle DM'de kapatır.</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="step__no">04</span>
+            <div class="step__body"><h3>Yönet</h3><p>Gün sonunda sana bir çırak gibi sesli rapor verir: kaç sipariş, ne kadar ciro, hangi üründe stok açığı var.</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="features section" id="ozellikler">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">ÖZELLİKLER</span>
+          <h2 class="section-title">Bir bot değil, <span class="txt-gold">bir yapay zeka çalışanı.</span></h2>
+          <p class="section-sub">SnaphAI'yı ManyChat ve statik botlardan ayıran dört büyük fark.</p>
+        </div>
+
+        <div class="features__grid">
+          <article class="feature feature--wide reveal">
+            <span class="feature__badge">01</span>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M5 19 16 8"/><path d="M18 3.5l.8 2.1 2.1.8-2.1.8-.8 2.1-.8-2.1L15 6.4l2.2-.8z"/><path d="M6 4l.5 1.4L8 5.9 6.5 6.4 6 7.8 5.5 6.4 4 5.9l1.5-.5z"/></svg>
+            </div>
+            <h3>Sihirli Kurulum — Sıfır Kod</h3>
+            <p>Rakipler web sitesi, Excel listesi veya PDF bilgi bankası ister. SnaphAI sadece profilini ister; gönderilerini Meta Graph API ile tarayıp mağazanı kendi kendine kurar.</p>
+            <ul class="feature__list">
+              <li>Otomatik ürün ve fiyat çıkarımı</li>
+              <li>Anında yayına hazır mağaza</li>
+            </ul>
+          </article>
+
+          <article class="feature reveal">
+            <span class="feature__badge">02</span>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><line x1="3" y1="10" x2="3" y2="14"/><line x1="7.5" y1="7" x2="7.5" y2="17"/><line x1="12" y1="4" x2="12" y2="20"/><line x1="16.5" y1="7" x2="16.5" y2="17"/><line x1="21" y1="10" x2="21" y2="14"/></svg>
+            </div>
+            <h3>Sesten Sese Ticaret</h3>
+            <p>Müşteri sesli mesaj atmayı sever. SnaphAI sesli mesajı anlar (Whisper) ve karşılığında sıcak, insan gibi bir sesle yanıtlar.</p>
+          </article>
+
+          <article class="feature reveal">
+            <span class="feature__badge">03</span>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v10H8l-4 4z"/><circle cx="9.5" cy="10" r="1"/><circle cx="14.5" cy="10" r="1"/><line x1="15.5" y1="7.5" x2="8.5" y2="12.5"/></svg>
+            </div>
+            <h3>Nabza Göre Şerbet</h3>
+            <p>Ahilik ahlakından ilham alan pazarlık motoru; müşterinin tavrını okur, senin alt sınırlarında kalır, öğrenciye jest yapar, sepeti büyütür.</p>
+          </article>
+
+          <article class="feature feature--wide reveal">
+            <span class="feature__badge">04</span>
+            <div class="feature__icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M4 10v4l10 4V6z"/><path d="M14 8.5a4 4 0 0 1 0 7"/><path d="M4 10H3a1 1 0 0 0-1 1v2a1 1 0 0 0 1 1h1"/><line x1="7.5" y1="15.5" x2="8.5" y2="20"/></svg>
+            </div>
+            <h3>Usta'ya Sesli Rapor ve Akıllı Stok</h3>
+            <p>"Bugün dükkânda ne oldu?" diye sorduğunda günü sesli özetler. 50 sipariş gelip 30 ürün varsa "Usta, 20 açığımız var, tedarik edebilir misin?" diye sorar; edemiyorsan kalan müşterilere kibarca haber verir.</p>
+            <ul class="feature__list">
+              <li>Sesli günlük ciro ve sipariş özeti</li>
+              <li>Stok açığında proaktif uyarı</li>
+              <li>Otomatik "stok kalmadı" nezaketi</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PHILOSOPHY ============ -->
+    <section class="philo section" id="felsefe">
+      <div class="philo__pattern" aria-hidden="true"></div>
+      <div class="container philo__inner">
+        <div class="reveal">
+          <span class="kicker kicker--gold">FELSEFEMİZ</span>
+          <h2 class="philo__title">Kadim ticaret ahlakı,<br />geleceğin yapay zekasıyla buluşuyor.</h2>
+        </div>
+        <div class="philo__text reveal">
+          <p>
+            Bu topraklarda ticaret; komşuluk, dürüstlük ve müşteriye emanet gözüyle bakmak demekti.
+            <strong>Ahilik</strong> ve <strong>lonca</strong> geleneği, esnafı bir usta–çırak zinciriyle terbiye ederdi.
+          </p>
+          <p>
+            SnaphAI bu ahlakı dijitale taşır: her butik kendi <em>dijital loncasını</em> kurar, yapay zeka çırağı
+            onun adına dürüst, nazik ve kârlı satış yapar. İsmimiz de buradan gelir: profilini bir anda
+            ("<span class="txt-gold">Snap</span>") mağazaya çeviren küresel hız, bu toprakların en köklü kelimesi
+            "<span class="txt-gold">Esnaf</span>" ile buluşur.
+          </p>
+          <blockquote class="philo__quote">"Kadim Gelenek, Dijital Gelecek."</blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TRUST / FOUNDING COHORT ============ -->
+    <section class="trust section" aria-label="Kurucu Lonca ve güven">
+      <div class="container">
+        <div class="trust__inner reveal">
+          <div class="trust__offer">
+            <span class="kicker">KURUCU LONCA · ERKEN ERİŞİM</span>
+            <h2 class="trust__title">İlk 50 butiğe özel kuruluş desteği.</h2>
+            <p>SnaphAI'ın kurucu loncasına katıl: birebir kurulum, öncelikli özellik istekleri ve kuruluşta özel Usta desteği. Erken katılanlar fiyatını kilitler.</p>
+            <a href="#iletisim" class="btn btn--gold">Kurucu Lonca'ya Katıl</a>
+          </div>
+          <div class="trust__tech">
+            <span class="trust__tech-label">Güvenli altyapı</span>
+            <ul class="trust__badges">
+              <li>Meta Graph API</li>
+              <li>iyzico</li>
+              <li>PayTR</li>
+              <li>Whisper</li>
+              <li>KVKK uyumlu</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PRICING ============ -->
+    <section class="pricing section section--cream" id="fiyat">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">FİYATLANDIRMA</span>
+          <h2 class="section-title">Loncadaki yerini seç. <span class="txt-gold">Çırak, Kalfa, Usta.</span></h2>
+          <p class="section-sub">İşletmenin büyüklüğüne göre tek ve şeffaf bir aylık ücret. Ayda tek bir kaçan satış bile planın maliyetini çıkarır.</p>
+        </div>
+
+        <div class="billing-toggle reveal" role="group" aria-label="Faturalama dönemi">
+          <button class="billing-toggle__btn" data-billing="monthly" aria-pressed="false">Aylık</button>
+          <button class="billing-toggle__btn is-active" data-billing="yearly" aria-pressed="true">Yıllık <span class="save-pill">2 ay hediye</span></button>
+        </div>
+
+        <div class="plans">
+          <!-- ÇIRAK -->
+          <article class="plan reveal">
+            <header class="plan__head">
+              <span class="plan__rank">ÇIRAK</span>
+              <h3 class="plan__name">Yeni başlayan butikler</h3>
+            </header>
+            <div class="plan__price">
+              <span class="plan__cur">₺</span>
+              <span class="plan__amount" data-monthly="899" data-yearly="749">749</span>
+              <span class="plan__per">/ay</span>
+              <span class="plan__was" data-was="₺899">₺899</span>
+            </div>
+            <p class="plan__billnote"
+               data-monthly="Aylık faturalandırılır"
+               data-yearly="₺8.990/yıl · 2 ay bedava (₺1.798 tasarruf)">₺8.990/yıl · 2 ay bedava (₺1.798 tasarruf)</p>
+            <a href="#iletisim" class="btn btn--outline btn--block">Ücretsiz Başla</a>
+            <ul class="plan__feats">
+              <li>Instagram profil bağlama ve sihirli kurulum</li>
+              <li>Aylık <strong>300 otonom konuşma</strong> <span class="feat-hint">(≈ günde ~10 müşteri)</span></li>
+              <li>Yazılı yapay zeka satış asistanı</li>
+              <li>Otomatik ürün ve fiyat kataloğu</li>
+              <li>Güvenli ödeme linki (iyzico / PayTR)</li>
+              <li>E-posta desteği</li>
+            </ul>
+          </article>
+
+          <!-- KALFA -->
+          <article class="plan plan--featured reveal">
+            <span class="plan__ribbon">EN POPÜLER</span>
+            <header class="plan__head">
+              <span class="plan__rank">KALFA</span>
+              <h3 class="plan__name">Büyüyen butikler</h3>
+            </header>
+            <div class="plan__price">
+              <span class="plan__cur">₺</span>
+              <span class="plan__amount" data-monthly="1.899" data-yearly="1.583">1.583</span>
+              <span class="plan__per">/ay</span>
+              <span class="plan__was" data-was="₺1.899">₺1.899</span>
+            </div>
+            <p class="plan__billnote"
+               data-monthly="Aylık faturalandırılır"
+               data-yearly="₺18.990/yıl · 2 ay bedava (₺3.798 tasarruf)">₺18.990/yıl · 2 ay bedava (₺3.798 tasarruf)</p>
+            <a href="#iletisim" class="btn btn--gold btn--block">Demo İste</a>
+            <ul class="plan__feats">
+              <li><strong>Çırak'taki her şey ve dahası:</strong></li>
+              <li>Sesten sese ticaret (sesli mesaj → sesli yanıt)</li>
+              <li>Nabza göre şerbet — dinamik pazarlık motoru</li>
+              <li>Aylık <strong>2.000 otonom konuşma</strong></li>
+              <li>Sepet büyütme (upsell) ve jest indirimleri</li>
+              <li>Usta'ya sesli günlük rapor</li>
+              <li>Akıllı stok uyarıları</li>
+              <li>Öncelikli WhatsApp desteği</li>
+            </ul>
+          </article>
+
+          <!-- USTA -->
+          <article class="plan reveal">
+            <header class="plan__head">
+              <span class="plan__rank">USTA</span>
+              <h3 class="plan__name">Yüksek hacim ve ajanslar</h3>
+            </header>
+            <div class="plan__price plan__price--custom">
+              <span class="plan__amount plan__amount--custom">Size Özel</span>
+            </div>
+            <p class="plan__billnote">5.000+ konuşma / çoklu mağaza için</p>
+            <a href="#iletisim" class="btn btn--dark btn--block">Satış Ekibiyle Görüş</a>
+            <ul class="plan__feats">
+              <li><strong>Kalfa'daki her şey ve dahası:</strong></li>
+              <li><strong>Sınırsız</strong> otonom konuşma</li>
+              <li>Çoklu mağaza ve ekip yönetimi</li>
+              <li>Özel ses ve marka tonu eğitimi</li>
+              <li>Gelişmiş analitik ve API erişimi</li>
+              <li>Özel kurulum ve hesap yöneticisi</li>
+              <li>7/24 öncelikli destek ve SLA</li>
+            </ul>
+          </article>
+        </div>
+
+        <p class="pricing__foot reveal">Tüm planlar 14 gün ücretsiz denenir · İstediğin an iptal · KVKK uyumlu</p>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq section" id="sss">
+      <div class="container faq__inner">
+        <div class="section-head section-head--left reveal">
+          <span class="kicker">SIKÇA SORULANLAR</span>
+          <h2 class="section-title">Aklına takılanlar</h2>
+        </div>
+
+        <div class="faq__list reveal">
+          <details class="qa">
+            <summary>Gerçekten kod bilmeden kurulur mu?</summary>
+            <p>Evet. Tek yaptığın Instagram profilini bağlamak. SnaphAI gönderilerini tarayıp ürün ve fiyatları kendisi çıkarır; mağazan saniyeler içinde hazır olur.</p>
+          </details>
+          <details class="qa">
+            <summary>Her şeyi kontrol edebiliyor muyum?</summary>
+            <p>Kesinlikle. Tüm konuşmaları görebilir, dilediğin an araya girip devralabilirsin. Alt fiyat sınırlarını ve konuşma tonunu sen belirlersin; SnaphAI yalnızca senin çizdiğin çerçevede hareket eder.</p>
+          </details>
+          <details class="qa">
+            <summary>Instagram hesabımı bağlamak riskli mi?</summary>
+            <p>Hayır. Bağlantı, Meta'nın resmi Graph API'si üzerinden yapılır; şifreni bizimle paylaşmazsın ve Instagram kullanım şartlarına aykırı bir işlem yapılmaz.</p>
+          </details>
+          <details class="qa">
+            <summary>Sesli mesajları nasıl anlıyor?</summary>
+            <p>Gelen sesli mesajları modern konuşma tanıma teknolojisiyle (Whisper) metne çevirir, niyeti analiz eder ve müşteriye yine doğal bir insan sesiyle sesli yanıt verir.</p>
+          </details>
+          <details class="qa">
+            <summary>Pazarlık yaparken fiyatı çok mu düşürüyor?</summary>
+            <p>Hayır. Sınırları sen belirlersin. SnaphAI yalnızca senin belirlediğin alt sınırın içinde hareket eder; çoğu zaman indirim yerine sepeti büyütmeyi (upsell) dener.</p>
+          </details>
+          <details class="qa">
+            <summary>Konuşma limitimi aşarsam ne olur?</summary>
+            <p>Satış hiç durmaz. Limit dolduğunda ek konuşmalar şeffaf birim fiyatla faturalanır ya da bir üst plana geçersin — habersiz kesinti veya gizli ücret yoktur.</p>
+          </details>
+          <details class="qa">
+            <summary>14 gün sonra otomatik mi ücretlendiriliyorum?</summary>
+            <p>Hayır. Deneme süresi bitince sen onaylamadan kartından ücret çekilmez. İstersen devam eder, istersen tek tıkla ayrılırsın.</p>
+          </details>
+          <details class="qa">
+            <summary>Stok biterse ne oluyor?</summary>
+            <p>SnaphAI stok açığını fark edince sana sesli haber verir. Tedarik edemezsen, bekleyen müşterilere otomatik ve kibar bir "stok kalmadı" mesajı gönderir; kimse yanıtsız kalmaz.</p>
+          </details>
+          <details class="qa">
+            <summary>Verilerim güvende mi?</summary>
+            <p>Evet. SnaphAI KVKK uyumludur; verilerin şifreli saklanır ve yalnızca senin mağazan için kullanılır. İstediğin an hesabını kapatıp verilerini silebilirsin.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA ============ -->
+    <section class="cta-band" id="iletisim">
+      <div class="cta-band__glow" aria-hidden="true"></div>
+      <div class="container cta-band__inner reveal">
+        <img class="mascot mascot--cta" src="assets/mascot.png" alt="" onerror="this.style.display='none'" />
+        <h2 class="cta-band__title">Loncana bugün katıl.</h2>
+        <p class="cta-band__sub">Kurulum 60 saniye. İlk satışını yapay zeka çırağın kapatsın.</p>
+        <form class="cta-form" id="demoForm" novalidate>
+          <label class="sr-only" for="demoEmail">E-posta veya Instagram kullanıcı adı</label>
+          <input id="demoEmail" name="contact" type="text" placeholder="E-posta ya da @instagram adın" required aria-describedby="formNote" />
+          <button type="submit" class="btn btn--gold btn--lg">Ücretsiz Demo Al</button>
+        </form>
+        <p class="cta-form__note" id="formNote" role="status" aria-live="polite">Spam yok · KVKK uyumlu · 14 gün ücretsiz · 24 saat içinde dönüş</p>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <div class="footer__brand">
+        <a class="brand brand--footer" href="#hero" aria-label="SnaphAI">
+          <span class="brand__mark" aria-hidden="true">
+            <svg class="brand__svg brand__svg--footer" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="60" cy="60" r="55" stroke="currentColor" stroke-width="3" class="mark-ring"/>
+              <path d="M78 46 C78 33 46 31 46 45 C46 57 78 58 78 74 C78 89 44 89 44 74" class="mark-s" stroke-width="10" stroke-linecap="round" fill="none"/>
+              <g class="mark-pin" stroke-width="2.6" stroke-linecap="round"><line x1="70" y1="34" x2="63" y2="20"/><line x1="76" y1="34" x2="76" y2="16"/><line x1="82" y1="34" x2="89" y2="20"/></g>
+              <g class="mark-dot"><circle cx="62.5" cy="19" r="3"/><circle cx="76" cy="14.5" r="3"/><circle cx="89.5" cy="19" r="3"/></g>
+            </svg>
+          </span>
+          <span class="brand__word">Snaph<span class="brand__ai">AI</span></span>
+        </a>
+        <p class="footer__tag">Kadim Gelenek, Dijital Gelecek.</p>
+        <p class="footer__desc">Instagram'ın Dijital Loncası — butikler için otonom yapay zeka çalışanı.</p>
+      </div>
+
+      <nav class="footer__col" aria-label="Ürün">
+        <h3>Ürün</h3>
+        <a href="#ozellikler">Özellikler</a>
+        <a href="#nasil">Nasıl Çalışır</a>
+        <a href="#fiyat">Fiyatlandırma</a>
+        <a href="#sss">SSS</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="Şirket">
+        <h3>Şirket</h3>
+        <a href="#felsefe">Felsefemiz</a>
+        <a href="#iletisim">İletişim</a>
+        <a href="#" aria-disabled="true">Kariyer</a>
+        <a href="#" aria-disabled="true">Blog</a>
+      </nav>
+
+      <nav class="footer__col" aria-label="İletişim">
+        <h3>İletişim</h3>
+        <a href="mailto:merhaba@snaphai.com">merhaba@snaphai.com</a>
+        <a href="https://snaphai.com" target="_blank" rel="noopener">snaphai.com</a>
+        <div class="footer__social">
+          <a href="#" aria-disabled="true" aria-label="Instagram">Instagram</a>
+          <a href="#" aria-disabled="true" aria-label="LinkedIn">LinkedIn</a>
+          <a href="#" aria-disabled="true" aria-label="X">X</a>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container footer__bottom">
+      <span>© <span id="year">2026</span> SnaphAI. Tüm hakları saklıdır.</span>
+      <div class="footer__legal">
+        <a href="#" aria-disabled="true">Gizlilik Politikası</a>
+        <a href="#" aria-disabled="true">KVKK Aydınlatma</a>
+        <a href="#" aria-disabled="true">Kullanım Şartları</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
