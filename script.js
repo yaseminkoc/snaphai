@@ -73,6 +73,82 @@
     });
   }
 
+  /* ---- hero phone: swipeable scenario carousel ---- */
+  var track = document.getElementById("dmTrack");
+  var dotsWrap = document.getElementById("dmDots");
+  if (track && dotsWrap) {
+    var slides = Array.prototype.slice.call(track.querySelectorAll(".dm-slide"));
+    var nameEl = document.getElementById("dmName");
+    var avatarEl = document.getElementById("dmAvatar");
+    var subEl = document.getElementById("dmSub");
+    var current = 0, autoTimer = null, paused = false, resumeT = null;
+
+    slides.forEach(function (s, i) {
+      var d = document.createElement("i");
+      d.addEventListener("click", function () { goTo(i); pauseAuto(); });
+      dotsWrap.appendChild(d);
+    });
+    var dots = Array.prototype.slice.call(dotsWrap.children);
+
+    function render(i) {
+      dots.forEach(function (d, k) { d.classList.toggle("is-active", k === i); });
+      var s = slides[i];
+      if (!s) return;
+      if (nameEl) nameEl.textContent = s.dataset.name || nameEl.textContent;
+      if (avatarEl) avatarEl.textContent = s.dataset.avatar || avatarEl.textContent;
+      if (subEl) subEl.textContent = s.dataset.sub || subEl.textContent;
+    }
+    function goTo(i) {
+      i = (i + slides.length) % slides.length;
+      track.scrollTo({ left: track.clientWidth * i, behavior: "smooth" });
+      current = i; render(i);
+    }
+
+    var scrollT;
+    track.addEventListener("scroll", function () {
+      window.clearTimeout(scrollT);
+      scrollT = window.setTimeout(function () {
+        var i = Math.round(track.scrollLeft / track.clientWidth);
+        if (i !== current) { current = i; render(i); }
+      }, 60);
+    }, { passive: true });
+
+    function startAuto() {
+      if (prefersReduced) return;
+      stopAuto();
+      autoTimer = window.setInterval(function () { if (!paused) goTo(current + 1); }, 4800);
+    }
+    function stopAuto() { if (autoTimer) { window.clearInterval(autoTimer); autoTimer = null; } }
+    function pauseAuto() {
+      paused = true;
+      window.clearTimeout(resumeT);
+      resumeT = window.setTimeout(function () { paused = false; }, 9000);
+    }
+    track.addEventListener("pointerenter", function () { paused = true; });
+    track.addEventListener("pointerleave", function () { paused = false; });
+    track.addEventListener("touchstart", pauseAuto, { passive: true });
+
+    // drag-to-scroll (mouse)
+    var isDown = false, startX = 0, startLeft = 0, moved = false;
+    track.addEventListener("pointerdown", function (e) {
+      if (e.pointerType === "mouse") { isDown = true; moved = false; startX = e.clientX; startLeft = track.scrollLeft; track.style.cursor = "grabbing"; }
+    });
+    window.addEventListener("pointermove", function (e) {
+      if (!isDown) return;
+      var dx = e.clientX - startX;
+      if (Math.abs(dx) > 3) moved = true;
+      track.scrollLeft = startLeft - dx;
+    });
+    window.addEventListener("pointerup", function () {
+      if (!isDown) return;
+      isDown = false; track.style.cursor = "";
+      if (moved) goTo(Math.round(track.scrollLeft / track.clientWidth));
+    });
+
+    render(0);
+    startAuto();
+  }
+
   /* ---- pricing billing toggle ---- */
   var billingBtns = document.querySelectorAll(".billing-toggle__btn");
   var amounts = document.querySelectorAll(".plan__amount[data-monthly]");

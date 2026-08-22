@@ -112,48 +112,85 @@
             <div class="phone__notch"></div>
             <div class="phone__screen">
               <div class="dm-head">
-                <span class="dm-avatar">ZB</span>
+                <span class="dm-avatar" id="dmAvatar">ZB</span>
                 <div class="dm-head__meta">
-                  <strong>Zarif Butik</strong>
-                  <span>SnaphAI ile yanıtlıyor · <span class="dot-live"></span> aktif</span>
+                  <strong id="dmName">Zarif Butik</strong>
+                  <span><span class="dot-live"></span> <span id="dmSub">SnaphAI ile yanıtlıyor</span></span>
                 </div>
               </div>
 
-              <div class="dm-body">
-                <div class="bubble bubble--in">
-                  <div class="voice">
-                    <span class="voice__play">▶</span>
-                    <span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-                    <span class="voice__time">0:11</span>
-                  </div>
-                  <span class="bubble__cap">Müşteri · sesli mesaj</span>
-                </div>
-
-                <div class="bubble bubble--out">
-                  <div class="voice voice--gold">
-                    <span class="voice__play">▶</span>
-                    <span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span>
-                    <span class="voice__time">0:08</span>
-                  </div>
-                  <p>Merhaba 🌿 O elbise stokta! Bedeninize göre iki renk önerebilirim.</p>
-                  <span class="bubble__cap">SnaphAI · sesli yanıt</span>
-                </div>
-
-                <div class="product-card">
-                  <div class="product-card__img"></div>
-                  <div class="product-card__info">
-                    <strong>Keten Anadolu Elbisesi</strong>
-                    <span class="product-card__price">₺1.240 <s>₺1.450</s></span>
-                    <span class="product-card__tag">Öğrenciye özel indirim 🎓</span>
+              <div class="dm-track" id="dmTrack">
+                <!-- Senaryo 1: Sesli satış -->
+                <div class="dm-slide" data-name="Zarif Butik" data-avatar="ZB" data-sub="SnaphAI ile yanıtlıyor">
+                  <div class="dm-body">
+                    <div class="bubble bubble--in">
+                      <div class="voice"><span class="voice__play">▶</span><span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="voice__time">0:11</span></div>
+                      <span class="bubble__cap">Müşteri · sesli mesaj</span>
+                    </div>
+                    <div class="bubble bubble--out">
+                      <div class="voice voice--gold"><span class="voice__play">▶</span><span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="voice__time">0:08</span></div>
+                      <p>Merhaba 🌿 O elbise stokta! Bedeninize göre iki renk önerebilirim.</p>
+                      <span class="bubble__cap">SnaphAI · sesli yanıt</span>
+                    </div>
+                    <div class="product-card">
+                      <div class="product-card__img"></div>
+                      <div class="product-card__info">
+                        <strong>Keten Anadolu Elbisesi</strong>
+                        <span class="product-card__price">₺1.240 <s>₺1.450</s></span>
+                        <span class="product-card__tag">Öğrenciye özel indirim 🎓</span>
+                      </div>
+                    </div>
+                    <div class="bubble bubble--out bubble--pay"><span class="pay-ico">🔒</span> Güvenli ödeme linkiniz hazır — iyzico</div>
                   </div>
                 </div>
 
-                <div class="bubble bubble--out bubble--pay">
-                  <span class="pay-ico">🔒</span> Güvenli ödeme linkiniz hazır — iyzico
+                <!-- Senaryo 2: Dinamik pazarlık -->
+                <div class="dm-slide" data-name="Moda Evi" data-avatar="ME" data-sub="SnaphAI ile yanıtlıyor">
+                  <div class="dm-body">
+                    <div class="bubble bubble--in">
+                      <p>Bu çantada biraz indirim mümkün mü? 😊</p>
+                      <span class="bubble__cap">Müşteri</span>
+                    </div>
+                    <div class="bubble bubble--out">
+                      <p>Elbette değerlendirelim! Tek üründe %5, iki ürün alımında ise kargo tamamen bizden. 🎁</p>
+                      <span class="bubble__cap">SnaphAI · dinamik teklif</span>
+                    </div>
+                    <div class="product-card">
+                      <div class="product-card__img product-card__img--bag"></div>
+                      <div class="product-card__info">
+                        <strong>Deri Omuz Çantası</strong>
+                        <span class="product-card__price">₺1.995 <s>₺2.100</s></span>
+                        <span class="product-card__tag">Sepete 2. ürün · kargo bedava 📦</span>
+                      </div>
+                    </div>
+                    <div class="bubble bubble--out bubble--pay"><span class="pay-ico">🔒</span> Onaylarsanız ödeme linkini gönderiyorum</div>
+                  </div>
+                </div>
+
+                <!-- Senaryo 3: Sesli yönetim raporu -->
+                <div class="dm-slide" data-name="SnaphAI" data-avatar="AI" data-sub="Günlük yönetim raporu">
+                  <div class="dm-body">
+                    <div class="bubble bubble--out">
+                      <div class="voice"><span class="voice__play">▶</span><span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="voice__time">0:04</span></div>
+                      <p>Bugün ne kadar sattık?</p>
+                      <span class="bubble__cap">İşletme sahibi · sesli soru</span>
+                    </div>
+                    <div class="bubble bubble--in">
+                      <div class="voice voice--gold"><span class="voice__play">▶</span><span class="wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span><span class="voice__time">0:12</span></div>
+                      <p>Bugün 12 sipariş aldık, toplam ciro ₺14.300 📈</p>
+                      <span class="bubble__cap">SnaphAI · sesli rapor</span>
+                    </div>
+                    <div class="report-card">
+                      <div class="report-row"><span>Sipariş</span><strong>12</strong></div>
+                      <div class="report-row"><span>Günlük ciro</span><strong>₺14.300</strong></div>
+                      <div class="report-row"><span>Stok uyarısı</span><strong class="report-warn">1 ürün</strong></div>
+                    </div>
+                  </div>
                 </div>
               </div>
 
-              <div class="dm-foot"><span>⚡ SnaphAI otonom yanıtladı</span></div>
+              <div class="dm-dots" id="dmDots" aria-hidden="true"></div>
+              <div class="dm-foot"><span>⚡ SnaphAI otonom çalışıyor</span></div>
             </div>
           </div>
           <div class="float-badge float-badge--1">🎙️ Sesten sese</div>
@@ -446,6 +483,7 @@
 
     <!-- ============ FAQ ============ -->
     <section class="faq section" id="sss">
+      <span class="mascot mascot--faq" aria-hidden="true"><img src="assets/mascot.png" alt="" onerror="this.closest('.mascot').style.display='none'" /></span>
       <div class="container faq__inner">
         <div class="section-head section-head--left reveal">
           <span class="kicker">SIKÇA SORULANLAR</span>
