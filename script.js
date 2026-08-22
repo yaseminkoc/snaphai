@@ -177,7 +177,7 @@
       var input = document.getElementById("demoEmail");
       var val = (input.value || "").trim();
       if (!looksValid(val)) {
-        note.textContent = "Lütfen geçerli bir e-posta ya da Instagram adı gir.";
+        note.textContent = "Lütfen geçerli bir e-posta veya Instagram adı girin.";
         note.classList.remove("is-success");
         input.setAttribute("aria-invalid", "true");
         input.focus();
