@@ -293,16 +293,13 @@ main:focus { outline: none; }
 .mascot--cta img { filter: drop-shadow(0 14px 30px rgba(216,185,106,.5)); }
 .mascot--cta.is-in { animation: floaty 5s ease-in-out 1s infinite; }
 
-/* SSS bölümünde dolaşan Lumi */
-.mascot--faq { position: absolute; left: 3%; bottom: 9%; width: clamp(96px, 9vw, 132px); z-index: 1; }
-.mascot--faq img { filter: drop-shadow(0 14px 30px rgba(201,162,75,.4)); }
-.mascot--faq.is-in { animation: mascotRoam 15s ease-in-out 1.1s infinite; }
-@keyframes mascotRoam {
-  0%   { transform: translate(0, 0) rotate(0); }
-  20%  { transform: translate(26px, -20px) rotate(5deg); }
-  45%  { transform: translate(10px, 16px) rotate(-4deg); }
-  70%  { transform: translate(-16px, -8px) rotate(3deg); }
-  100% { transform: translate(0, 0) rotate(0); }
+/* SSS bölümünde Lumi: aşağıdan yukarı "Merak edilenler" başlığına doğru çıkar, sonra iner */
+.mascot--faq { position: absolute; left: 5%; top: 72%; width: clamp(100px, 9vw, 136px); z-index: 3; }
+.mascot--faq img { filter: drop-shadow(0 14px 30px rgba(201,162,75,.42)); }
+.mascot--faq.is-in { animation: mascotTravel 8s ease-in-out .6s infinite; }
+@keyframes mascotTravel {
+  0%, 100% { top: 74%; transform: translateX(0) rotate(0); }
+  48%, 52% { top: 24%; transform: translateX(12px) rotate(5deg); }
 }
 
 @keyframes mascotEnter {
