@@ -107,7 +107,7 @@
 
         <!-- phone mockup -->
         <div class="hero__visual reveal" aria-hidden="true">
-          <img class="mascot mascot--hero" src="assets/mascot.png" alt="" onerror="this.style.display='none'" />
+          <span class="mascot mascot--hero" aria-hidden="true"><img src="assets/mascot.png" alt="" onerror="this.closest('.mascot').style.display='none'" /></span>
           <div class="phone">
             <div class="phone__notch"></div>
             <div class="phone__screen">
@@ -496,7 +496,7 @@
     <section class="cta-band" id="iletisim">
       <div class="cta-band__glow" aria-hidden="true"></div>
       <div class="container cta-band__inner reveal">
-        <img class="mascot mascot--cta" src="assets/mascot.png" alt="" onerror="this.style.display='none'" />
+        <span class="mascot mascot--cta" aria-hidden="true"><img src="assets/mascot.png" alt="" onerror="this.closest('.mascot').style.display='none'" /></span>
         <h2 class="cta-band__title">SnaphAI'ya bugün başlayın.</h2>
         <p class="cta-band__sub">Kurulum 60 saniye. İlk satışınızı yapay zeka asistanınız tamamlasın.</p>
         <form class="cta-form" id="demoForm" novalidate>

@@ -138,6 +138,25 @@
     revealEls.forEach(function (el) { el.classList.add("is-in"); });
   }
 
+  /* ---- mascot (Lumi) entrance: animate in when scrolled into view ---- */
+  var mascotEls = document.querySelectorAll(".mascot");
+  if (mascotEls.length) {
+    if (prefersReduced || !("IntersectionObserver" in window)) {
+      mascotEls.forEach(function (m) { m.classList.add("is-in"); });
+    } else {
+      var mio = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (e.isIntersecting) { e.target.classList.add("is-in"); mio.unobserve(e.target); }
+        });
+      }, { threshold: 0.25 });
+      mascotEls.forEach(function (m) { mio.observe(m); });
+      // safety net: never leave Lumi invisible if the observer misfires
+      window.setTimeout(function () {
+        document.querySelectorAll(".mascot:not(.is-in)").forEach(function (m) { m.classList.add("is-in"); });
+      }, 3500);
+    }
+  }
+
   /* ---- animated stat counters ---- */
   var statNums = document.querySelectorAll(".stat__num[data-count]");
   function animateCount(el) {
