@@ -21,12 +21,34 @@ python -m http.server 8000
 # sonra: http://localhost:8000
 ```
 
-## Yayına alma (snaphai.com)
-Tamamen statik olduğu için herhangi bir yere sürükle-bırak yüklenebilir:
-- **Netlify / Vercel / Cloudflare Pages** → klasörü bağla, otomatik yayınlanır.
+## Yayına alma — Vercel (önerilen)
+Site tamamen statiktir, **build adımı yoktur**. `vercel.json` hazır.
+
+### Yol A — Vercel CLI (en hızlı)
+```bash
+npm i -g vercel
+cd C:\Users\Yasemin\Desktop\snaphai
+vercel            # ilk sefer: giriş + proje oluşturma (soruların hepsine Enter/varsayılan)
+vercel --prod     # production'a al
+```
+Sorulursa: **Framework Preset: Other**, **Build Command: (boş)**, **Output Directory: ./** .
+
+### Yol B — GitHub + Vercel paneli
+1. Klasörü bir GitHub reposuna gönder.
+2. vercel.com → **Add New → Project** → repoyu **Import** et.
+3. Framework: **Other**, build ayarı yok → **Deploy**.
+
+### Alan adı (snaphai.com)
+Vercel projesi → **Settings → Domains → Add** → `snaphai.com`.
+Vercel'in verdiği DNS kayıtlarını (A kaydı ya da nameserver) alan adı sağlayıcında gir.
+
+> Not: `assets/` klasörü (logo.png, mascot.png, favicon.svg, logo.svg) mutlaka
+> deploy'a dahil olmalı — hepsi bu klasörde, otomatik yüklenir.
+
+## Diğer yayınlama seçenekleri
+- **Netlify / Cloudflare Pages** → klasörü sürükle-bırak, otomatik yayınlanır.
 - **GitHub Pages** → repoya at, Pages'i aç.
 - **Klasik hosting (cPanel)** → dosyaları `public_html` içine kopyala.
-Sonra `snaphai.com` alan adını sağlayıcının panelinden bağla.
 
 ## Görselleri ekle (logo + maskot)
 Site, iki gerçek görseli **sen klasöre koyunca otomatik** kullanır. Koymazsan
