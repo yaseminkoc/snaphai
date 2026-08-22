@@ -293,13 +293,30 @@ main:focus { outline: none; }
 .mascot--cta img { filter: drop-shadow(0 14px 30px rgba(216,185,106,.5)); }
 .mascot--cta.is-in { animation: floaty 5s ease-in-out 1s infinite; }
 
-/* SSS bölümünde Lumi: aşağıdan yukarı "Merak edilenler" başlığına doğru çıkar, sonra iner */
-.mascot--faq { position: absolute; left: 5%; top: 72%; width: clamp(100px, 9vw, 136px); z-index: 3; }
-.mascot--faq img { filter: drop-shadow(0 14px 30px rgba(201,162,75,.42)); }
-.mascot--faq.is-in { animation: mascotTravel 8s ease-in-out .6s infinite; }
-@keyframes mascotTravel {
-  0%, 100% { top: 74%; transform: translateX(0) rotate(0); }
-  48%, 52% { top: 24%; transform: translateX(12px) rotate(5deg); }
+/* SSS bölümünde Lumi: "Merak edilenler" başlığının etrafında elips (yörünge) çizer */
+.faq .section-head { position: relative; display: inline-block; }
+.mascot--faq {
+  position: absolute; top: 50%; left: 50%; z-index: 3;
+  width: clamp(80px, 8vw, 108px);
+  transform: translate(calc(-50% + 130px), -50%);   /* animasyon yoksa başlığın sağında park eder */
+}
+.mascot--faq img { filter: drop-shadow(0 12px 28px rgba(201,162,75,.45)); }
+.mascot--faq.is-in { animation: mascotOrbit 12s linear .4s infinite; }
+/* elips: yatay yarıçap 130px, dikey yarıçap 70px — başlık merkezinin çevresinde döner */
+@keyframes mascotOrbit {
+  0%     { transform: translate(calc(-50% + 130px),   calc(-50% + 0px)); }
+  8.33%  { transform: translate(calc(-50% + 112.6px), calc(-50% + 35px)); }
+  16.66% { transform: translate(calc(-50% + 65px),    calc(-50% + 60.6px)); }
+  25%    { transform: translate(calc(-50% + 0px),     calc(-50% + 70px)); }
+  33.33% { transform: translate(calc(-50% - 65px),    calc(-50% + 60.6px)); }
+  41.66% { transform: translate(calc(-50% - 112.6px), calc(-50% + 35px)); }
+  50%    { transform: translate(calc(-50% - 130px),   calc(-50% + 0px)); }
+  58.33% { transform: translate(calc(-50% - 112.6px), calc(-50% - 35px)); }
+  66.66% { transform: translate(calc(-50% - 65px),    calc(-50% - 60.6px)); }
+  75%    { transform: translate(calc(-50% + 0px),     calc(-50% - 70px)); }
+  83.33% { transform: translate(calc(-50% + 65px),    calc(-50% - 60.6px)); }
+  91.66% { transform: translate(calc(-50% + 112.6px), calc(-50% - 35px)); }
+  100%   { transform: translate(calc(-50% + 130px),   calc(-50% + 0px)); }
 }
 
 @keyframes mascotEnter {
