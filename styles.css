@@ -612,7 +612,7 @@ main:focus { outline: none; }
 @media (prefers-reduced-motion: reduce) {
   * { animation: none !important; scroll-behavior: auto !important; }
   .js .reveal { opacity: 1 !important; translate: none !important; transition: none !important; }
-  .js .mascot img { opacity: 1 !important; }
+  .js .mascot__media { opacity: 1 !important; }
 }
 
 /* =========================================================
