@@ -410,7 +410,7 @@ main:focus { outline: none; }
 .feature p { color: var(--ink-soft); font-size: 15.5px; max-width: 60ch; }
 .feature__list { margin-top: 16px; display: grid; gap: 8px; }
 .feature__list li { position: relative; padding-left: 26px; font-size: 14.5px; color: var(--ink); font-weight: 500; }
-.feature__list li::before { content: "✦"; position: absolute; left: 0; color: var(--gold-text); }
+.feature__list li::before { content: "✓"; position: absolute; left: 0; color: var(--gold-text); font-weight: 800; }
 
 /* =========================================================
    PHILOSOPHY
